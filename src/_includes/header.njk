@@ -1,0 +1,39 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="/" class="text-xl md:text-2xl font-serif font-bold text-primary-900">
+        PM Portfolio
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#case-studies" class="nav-link">Case Studies</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden pb-4">
+      <div class="flex flex-col space-y-3">
+        <a href="#about" class="nav-link py-2">About</a>
+        <a href="#skills" class="nav-link py-2">Skills</a>
+        <a href="#case-studies" class="nav-link py-2">Case Studies</a>
+        <a href="#projects" class="nav-link py-2">Projects</a>
+        <a href="#testimonials" class="nav-link py-2">Testimonials</a>
+        <a href="#contact" class="btn btn-primary w-full text-center">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+</header>

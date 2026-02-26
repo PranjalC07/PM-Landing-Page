@@ -1,0 +1,475 @@
+---
+layout: base.njk
+title: Home
+description: Product Manager portfolio showcasing expertise in product strategy, user research, and cross-functional leadership.
+---
+
+<!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-secondary-50 pt-16">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="animate-fade-in">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+          Product Leader Driving <span class="text-primary-600">Business Transformation</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 font-light mb-8 max-w-3xl mx-auto text-balance">
+          I'm a Senior Product Manager with 8+ years of experience building B2B SaaS products that generate revenue, improve user retention, and scale engineering teams. I turn ambiguous problems into clear roadmaps and measurable outcomes.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#case-studies" class="btn btn-primary w-full sm:w-auto">View My Work</a>
+          <a href="#contact" class="btn btn-secondary w-full sm:w-auto">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 md:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="animate-slide-up">
+          <h2 class="section-title">About Me</h2>
+          <div class="space-y-4 text-lg text-gray-600 leading-relaxed">
+            <p>
+              I transform ambiguous challenges into clear product strategies and measurable outcomes. With over 8 years of B2B SaaS expertise, I build products that drive revenue growth, boost user retention, and empower engineering teams to scale efficiently.
+            </p>
+            <p>
+              At my current high-growth tech company, I've led initiatives that increased revenue by 40% and improved user retention by 25%. I'm passionate about crafting products that deliver exceptional business impact while creating genuinely meaningful user experiences.
+            </p>
+            <p>
+              When I'm not shipping products, I mentor emerging product managers, share insights on product strategy through writing, and explore how technology influences human behavior and decision-making.
+            </p>
+          </div>
+        </div>
+
+        <div class="animate-slide-up animate-delay-200">
+          <div class="bg-gray-50 rounded-2xl p-8 shadow-soft">
+            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-6">Core Expertise</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Product Strategy</h4>
+                  <p class="text-gray-600">Defining vision, roadmaps, and go-to-market strategies</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">User Research</h4>
+                  <p class="text-gray-600">Qualitative & quantitative insights driving product decisions</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Cross-Functional Leadership</h4>
+                  <p class="text-gray-600">Aligning engineering, design, marketing, and sales</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Data Analytics</h4>
+                  <p class="text-gray-600">Metrics, A/B testing, and performance optimization</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-20 md:py-32 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 animate-fade-in">
+          <h2 class="section-title">Skills & Expertise</h2>
+          <p class="section-subtitle mx-auto">
+            A comprehensive toolkit for product success, from technical depth to leadership excellence.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Technical Skills -->
+          <div class="animate-slide-up">
+            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <span class="w-1 h-8 bg-primary-500 mr-4"></span>
+              Technical & Strategic Skills
+            </h3>
+            <div class="space-y-6">
+              {% set techSkills = [
+                {'name': 'Product Strategy & Vision', 'level': 95},
+                {'name': 'Agile/Scrum & OKRs', 'level': 90},
+                {'name': 'User Research & Testing', 'level': 85},
+                {'name': 'Data Analytics & SQL', 'level': 88},
+                {'name': 'A/B Testing & Experimentation', 'level': 82},
+                {'name': 'Roadmapping & Prioritization', 'level': 92}
+              ] %}
+            {% for skill in techSkills %}
+            <div class="card">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold text-gray-900">{{ skill.name }}</span>
+                <span class="text-sm text-gray-600">{{ skill.level }}%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-primary-500 h-2 rounded-full transition-all duration-1000" style="width: {{ skill.level }}%"></div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="animate-slide-up animate-delay-200">
+          <h3 class="text-2xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+            <span class="w-1 h-8 bg-secondary-500 mr-4"></span>
+            Soft Skills
+          </h3>
+          <div class="space-y-6">
+            {% set softSkills = [
+              {'name': 'Leadership', 'level': 90},
+              {'name': 'Communication', 'level': 93},
+              {'name': 'Stakeholder Management', 'level': 88},
+              {'name': 'Negotiation', 'level': 85},
+              {'name': 'Conflict Resolution', 'level': 82},
+              {'name': 'Mentoring', 'level': 87}
+            ] %}
+            {% for skill in softSkills %}
+            <div class="card">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold text-gray-900">{{ skill.name }}</span>
+                <span class="text-sm text-gray-600">{{ skill.level }}%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-secondary-500 h-2 rounded-full transition-all duration-1000" style="width: {{ skill.level }}%"></div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Studies Section -->
+<section id="case-studies" class="py-20 md:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="section-title">Featured Case Studies</h2>
+        <p class="section-subtitle mx-auto">
+          Real-world examples of product challenges, solutions, and measurable outcomes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% set caseStudies = [
+          {
+            'title': 'Enterprise Analytics Platform',
+            'client': 'Fortune 500 Tech Company',
+            'challenge': 'Low adoption rates and poor user engagement with existing analytics dashboard',
+            'solution': 'Redesigned UX with personalized dashboards, real-time insights, and AI-powered recommendations',
+            'results': ['40% increase in user engagement', '25% improvement in retention', '$2M ARR expansion'],
+            'image': '/images/case-study-1.jpg'
+          },
+          {
+            'title': 'B2B Collaboration Tool',
+            'client': 'Series B Startup',
+            'challenge': 'Teams struggling with cross-functional communication and project visibility',
+            'solution': 'Built integrated workflow automation, real-time notifications, and advanced reporting',
+            'results': ['60% reduction in meeting time', '3x faster project delivery', '95% user satisfaction'],
+            'image': '/images/case-study-2.jpg'
+          },
+          {
+            'title': 'Internal Developer Platform',
+            'client': 'Mid-size SaaS Company',
+            'challenge': 'Slow deployment cycles and high operational overhead for engineering teams',
+            'solution': 'Designed self-service infrastructure platform with CI/CD automation and monitoring',
+            'results': ['70% faster deployments', '50% reduction in devops tickets', '4x developer productivity'],
+            'image': '/images/case-study-3.jpg'
+          }
+        ] %}
+
+        {% for study in caseStudies %}
+        <article class="card group hover:shadow-glow cursor-pointer project-item animate-slide-up animate-delay-{{ loop.index0 * 100 }}" data-category="{{ project.category }}">
+          <div class="aspect-video bg-gradient-to-br from-primary-100 to-secondary-100 rounded-xl mb-6 overflow-hidden">
+            <div class="w-full h-full flex items-center justify-center text-gray-400">
+              <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{{ study.title }}</h3>
+          <p class="text-sm text-secondary-500 font-medium mb-3">{{ study.client }}</p>
+          <p class="text-gray-600 mb-4 line-clamp-3">{{ study.challenge }}</p>
+          <div class="space-y-2 mb-6">
+            {% for result in study.results %}
+            <div class="flex items-center text-sm">
+              <svg class="w-4 h-4 text-secondary-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">{{ result }}</span>
+            </div>
+            {% endfor %}
+          </div>
+          <button class="btn btn-primary w-full">See Full Case Study</button>
+        </article>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 md:py-32 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="section-title">Project Showcase</h2>
+        <p class="section-subtitle mx-auto">
+          A selection of products I've led from concept to launch and beyond.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button class="filter-btn active px-6 py-2 rounded-full bg-primary-500 text-white transition-all" data-filter="all">All</button>
+        <button class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-300 hover:bg-gray-50 transition-all" data-filter="b2b">B2B</button>
+        <button class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-300 hover:bg-gray-50 transition-all" data-filter="b2c">B2C</button>
+        <button class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-300 hover:bg-gray-50 transition-all" data-filter="internal">Internal Tools</button>
+        <button class="filter-btn px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-300 hover:bg-gray-50 transition-all" data-filter="open-source">Open Source</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        {% set projects = [
+          {
+            'title': 'SaaS Dashboard Redesign',
+            'category': 'b2b',
+            'description': 'Complete overhaul of enterprise analytics dashboard improving user productivity by 40%',
+            'tech': ['React', 'TypeScript', 'D3.js'],
+            'image': '/images/project-1.jpg'
+          },
+          {
+            'title': 'Mobile Banking App',
+            'category': 'b2c',
+            'description': 'Led product development for a mobile-first banking experience serving 500K+ users',
+            'tech': ['React Native', 'Node.js', 'AWS'],
+            'image': '/images/project-2.jpg'
+          },
+          {
+            'title': 'Internal CRM System',
+            'category': 'internal',
+            'description': 'Built custom CRM solution that automated 80% of manual sales operations',
+            'tech': ['Vue.js', 'Python', 'PostgreSQL'],
+            'image': '/images/project-3.jpg'
+          },
+          {
+            'title': 'Open Source Design System',
+            'category': 'open-source',
+            'description': 'Created reusable component library adopted by 100+ open source projects',
+            'tech': ['React', 'Storybook', 'CSS'],
+            'image': '/images/project-4.jpg'
+          },
+          {
+            'title': 'E-commerce Platform',
+            'category': 'b2b',
+            'description': 'Scalable marketplace solution with advanced inventory and order management',
+            'tech': ['Next.js', 'GraphQL', 'MongoDB'],
+            'image': '/images/project-5.jpg'
+          },
+          {
+            'title': 'Health & Wellness App',
+            'category': 'b2c',
+            'description': 'Personalized health tracking app with AI-driven recommendations',
+            'tech': ['Flutter', 'Firebase', 'TensorFlow'],
+            'image': '/images/project-6.jpg'
+          }
+        ] %}
+
+        {% for project in projects %}
+        <article class="card group hover:shadow-glow cursor-pointer project-item animate-slide-up animate-delay-{{ loop.index0 * 100 }}" data-category="{{ project.category }}">
+          <div class="aspect-video bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl mb-6 overflow-hidden">
+            <div class="w-full h-full flex items-center justify-center text-gray-400">
+              <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{{ project.title }}</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">{{ project.description }}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {% for tech in project.tech %}
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ tech }}</span>
+            {% endfor %}
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-medium text-secondary-500 capitalize">{{ project.category }}</span>
+            <button class="text-primary-500 hover:text-primary-600 font-medium text-sm flex items-center group/btn">
+              View Project
+              <svg class="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 md:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-subtitle mx-auto">
+          Feedback from colleagues, clients, and collaborators I've had the pleasure to work with.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {% set testimonials = [
+          {
+            'quote': 'Working with this PM was transformative for our product. Their ability to translate complex business needs into elegant solutions is unmatched.',
+            'name': 'Sarah Johnson',
+            'title': 'VP of Product, TechCorp',
+            'company': 'TechCorp'
+          },
+          {
+            'quote': 'An exceptional leader who combines strategic vision with tactical execution. Our team productivity increased 3x under their guidance.',
+            'name': 'Michael Chen',
+            'title': 'Engineering Director',
+            'company': 'StartupXYZ'
+          },
+          {
+            'quote': 'The most user-obsessed product manager I\'ve ever collaborated with. Every decision was backed by deep research and data.',
+            'name': 'Emily Rodriguez',
+            'title': 'UX Research Lead',
+            'company': 'DesignStudio'
+          },
+          {
+            'quote': 'A true partner in innovation. They don\'t just manage products—they drive business impact and cultural change.',
+            'name': 'David Kim',
+            'title': 'CEO',
+            'company': 'GrowthLabs'
+          }
+        ] %}
+
+        {% for testimonial in testimonials %}
+        <div class="card animate-slide-up animate-delay-{{ loop.index0 * 100 }}">
+          <svg class="w-12 h-12 text-primary-200 mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+          <blockquote class="text-gray-700 mb-6 leading-relaxed">{{ testimonial.quote }}</blockquote>
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center text-white font-bold text-lg">
+              {{ testimonial.name[0] }}
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">{{ testimonial.name }}</p>
+              <p class="text-sm text-gray-600">{{ testimonial.title }}, {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 md:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle mx-auto">
+          Have a project in mind or want to discuss product leadership? I'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="animate-slide-up">
+          <div class="space-y-8">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
+                <a href="mailto:your.email@example.com" class="text-gray-600 hover:text-primary-600 transition-colors">your.email@example.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">LinkedIn</h3>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary-600 transition-colors">linkedin.com/in/yourprofile</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Schedule a Call</h3>
+                <a href="https://cal.com/yourprofile" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary-600 transition-colors">cal.com/yourprofile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="animate-slide-up animate-delay-200">
+          <form class="card space-y-6" id="contact-form">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+              <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+                <option value="">Select a topic</option>
+                <option value="product-consulting">Product Consulting</option>
+                <option value="career-advice">Career Advice</option>
+                <option value="speaking-engagement">Speaking Engagement</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
