@@ -73,49 +73,71 @@ Similar to Vercel - add domain in Site settings → Domain management.
 
 ## Alternative: GitHub Pages
 
-Free hosting directly from GitHub.
+Free hosting directly from GitHub with automated builds via GitHub Actions.
 
-### Setup
+### Automated Deployment (Recommended)
 
-1. In repository, go to Settings → Pages
-2. Source: "Deploy from a branch"
-3. Branch: `main` (or `gh-pages` if you prefer)
-4. Folder: `/ (root)`
-5. Save
+The project includes a pre-configured GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys on every push to `main`.
 
-**Note**: GitHub Pages doesn't run build commands automatically. You must:
-- Build locally: `npm run build`
-- Commit the `_site` folder to your repository
-- Or use GitHub Actions to automate the build
+#### Setup Steps:
 
-### GitHub Actions Workflow
+1. **Push to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/your-repo.git
+   git push -u origin main
+   ```
 
-Create `.github/workflows/deploy.yml`:
+2. **Enable GitHub Pages**
+   - Go to your repository → Settings → Pages
+   - Source: "GitHub Actions"
+   - The workflow will automatically deploy to GitHub Pages
 
-```yaml
-name: Deploy to GitHub Pages
+3. **Access Your Site**
+   - After the first workflow completes, your site will be at:
+     `https://yourusername.github.io/your-repo/`
 
-on:
-  push:
-    branches: [ main ]
+4. **Custom Domain (Optional)**
+   - In repository Settings → Pages → Custom domain
+   - Add your domain (e.g., `yourname.com`)
+   - GitHub will automatically configure SSL
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm ci
-      - run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+#### Manual Deployment
+
+If you prefer manual control, use the provided script:
+
+```bash
+npm run deploy
 ```
+
+This script:
+- Builds the site
+- Creates/updates the `gh-pages` branch
+- Pushes the built files to GitHub Pages
+
+#### Important Notes for GitHub Pages
+
+- **Relative Paths**: Asset paths are configured as relative (`css/output.css`, `js/main.js`) to work from the subdirectory
+- **No Jekyll**: The `.nojekyll` file disables Jekyll processing (GitHub's default static site processor)
+- **Build Time**: First deploy may take 2-3 minutes while GitHub provisions the Pages service
+
+### GitHub Actions Workflow Details
+
+The workflow (`.github/workflows/deploy.yml`):
+
+- **Trigger**: Push to `main` or `master` branches
+- **Build Steps**:
+  1. Checkout code
+  2. Setup Node.js 18
+  3. Install dependencies (`npm ci`)
+  4. Build CSS (`npm run build:css`)
+  5. Build site (`npm run build`)
+  6. Deploy to `gh-pages` branch using `peaceiris/actions-gh-pages`
+
+- **Configuration**: Edit `cname` in the workflow if using a custom domain
 
 ## Performance Checklist Before Deploy
 
